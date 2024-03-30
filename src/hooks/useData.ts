@@ -7,18 +7,13 @@ interface Payload<T> {
     results: T[];
 }
 
-const useData = <T>(
-    endpoint: string,
-    requestConfig?: AxiosRequestConfig,
-    dependencies?: any[]
-) => {
+const useData = <T>(endpoint: string, requestConfig?: AxiosRequestConfig, dependencies?: any[]) => {
     const [isLoading, setLoading] = useState(false);
     const [data, setData] = useState<T[]>([]);
     const [error, setError] = useState("");
 
     useEffect(
         () => {
-            console.log(dependencies);
             const controller = new AbortController();
 
             setLoading(true);
