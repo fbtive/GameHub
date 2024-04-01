@@ -1,11 +1,6 @@
 import { useEffect, useState } from "react";
-import apiClient from "../services/api-client";
+import apiClient, { Payload } from "../services/api-client";
 import { AxiosRequestConfig, CanceledError } from "axios";
-
-export interface Payload<T> {
-    count: number;
-    results: T[];
-}
 
 const useData = <T>(endpoint: string, requestConfig?: AxiosRequestConfig, dependencies?: any[]) => {
     const [isLoading, setLoading] = useState(false);

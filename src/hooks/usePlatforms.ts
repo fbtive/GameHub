@@ -1,10 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
-import { Payload } from "./useData";
-import apiClient from "../services/api-client";
+import apiClient, { Payload } from "../services/api-client";
 
 export interface Platform {
     id: number;
     name: string;
+    background_image: string;
     slug: string;
 }
 
