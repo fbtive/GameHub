@@ -2,7 +2,9 @@
 
 API provided by RAWG
 
--   [RAWG](https://https://api.rawg.io/docs/)
+-   [RAWG](https://api.rawg.io/docs/)
+
+Usage and instalation :
 
 ```
 npm install
